@@ -3,3 +3,4 @@ obrazek.ps
 *.tmp
 /venv/*
 .vscode/*
+test.py
