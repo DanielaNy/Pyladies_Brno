@@ -5,7 +5,6 @@ Rodne cislo: """)
 number = False
 string_number = False
 birth = False
-#sex = False
 
 def formatcheck(answer):
     """Function to check if the format is right. 
@@ -37,10 +36,8 @@ def male_female(string_number):
     if string_number == False:
         return 'NA'
     elif string_number[2] == "5" or string_number[2] == "6":
-        #sex = 'zena'
         return 'zena'
     elif string_number[2] == "0" or  string_number[2] == "1":
-        #sex = 'muz'
         return 'muz'
     else:
         return 'NA'
@@ -55,28 +52,7 @@ def birth_date(string_number):
     else:
         return 'NA'
 
-# formatcheck(answer)
-# print(formatcheck(answer))
-
-# divisible_by_11(number)
-# print(divisible_by_11(number))
-# print(string_number)
-# print(type(string_number))
-# print(string_number[2])
-# print(type(string_number[2]))
-
-# if string_number[2] == '0':
-#     print('ok')
-
-# male_female(string_number)
-# print(male_female(string_number)
-
-# birth_date(string_number)
-# print(birth_date(string_number))
-
 print(f'\na) Format cisla: {formatcheck(answer)}'.format(formatcheck(answer)))
 print(f'b) Delitelne 11: {divisible_by_11(number)}'.format(divisible_by_11(number)))
-print(string_number)
-print(string_number[2])
 print(f'c) Datum narodenia: {birth_date(string_number)}'.format(birth_date(string_number)))
 print(f'd) Pohlavie: {male_female(string_number)}'.format(male_female(string_number)))
