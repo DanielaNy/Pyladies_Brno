@@ -36,10 +36,10 @@ def divisible_by_11(number):
 def male_female(string_number):
     if string_number == False:
         return 'NA'
-    elif string_number[2] == "5" or "6":
+    elif string_number[2] == "5" or string_number[2] == "6":
         #sex = 'zena'
         return 'zena'
-    elif string_number[2] == "0" or "1":
+    elif string_number[2] == "0" or  string_number[2] == "1":
         #sex = 'muz'
         return 'muz'
     else:
