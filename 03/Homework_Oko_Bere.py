@@ -1,3 +1,4 @@
+# oko bere
 from random import randint
 
 points = 0

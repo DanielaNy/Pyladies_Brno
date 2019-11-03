@@ -1,3 +1,4 @@
+# 10 domcekov
 from turtle import forward, shape, left, right, exitonclick, pendown, penup
 from math import sqrt
 
