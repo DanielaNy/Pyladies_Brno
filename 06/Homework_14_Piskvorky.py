@@ -3,8 +3,9 @@ from random import randint
 pole = '--------------------'
 list_pole = list(pole)
 cislo_policka = False
+tuple_pole = ()
 
-def tah(cislo_policka, symbol):
+def tah(pole, cislo_policka, symbol):
     """funkcia vracajuca pole podla tahu hraca/pocitaca"""
     list_pole[cislo_policka] = symbol    
     pole = "".join(list_pole)
@@ -25,7 +26,7 @@ def tah_hraca(pole, cislo_policka):
     if cislo_policka in range(0, 20):
         if list_pole[cislo_policka] == "-":
             print('Ok. Policko je volne. Tvoj tah:')
-            pole = tah(cislo_policka, symbol)            
+            pole = tah(pole, cislo_policka, symbol)            
             return pole
         else:
             print('Pozor! Toto policko je uz obsadene.')
@@ -38,9 +39,14 @@ def tah_pocitaca(pole, cislo_policka):
     """funkcia, ktora vygeneruje tah pocitaca, zavola funkciu 'tah'"""
     symbol = "O"
     cislo_policka = randint(0,19)
+    tuple_pole = enumerate(list_pole)
+    print(tuple_pole)
+
+
     if list_pole[cislo_policka] == "-":
+
         print(f"\nPocitac si vybral policko: {cislo_policka}. Tah pocitaca:")
-        pole = tah(cislo_policka, symbol)    
+        pole = tah(pole, cislo_policka, symbol)    
         return pole
     else:
         return tah_pocitaca(pole, cislo_policka)
