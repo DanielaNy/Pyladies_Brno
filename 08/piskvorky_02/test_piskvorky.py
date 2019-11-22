@@ -33,11 +33,11 @@ def test_tah_pocitaca_choose_place():
     assert pole.count("-") == 4
 
 def test_tah_pocitaca_full_pole():
-    with pytest.raises(RecursionError) as e_info:       # netusim, co je to e_info
+    with pytest.raises(RecursionError):     
         ai.tah_pocitaca("OOOXOXOXOXOXOXOXOXOX", symbol="O")
     
 def test_tah_pocitaca_no_pole():
-    with pytest.raises(ValueError) as e_info:
+    with pytest.raises(ValueError):
         ai.tah_pocitaca("", symbol="O")
 
 
