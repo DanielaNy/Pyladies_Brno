@@ -1,5 +1,6 @@
 import piskvorky, ai, util
 from random import randint
+import pytest
 
 # tests for tah function:
 
@@ -30,6 +31,14 @@ def test_tah_pocitaca_choose_place():
     pole = ai.tah_pocitaca("-----", symbol="O")
     assert pole.count("O") == 1
     assert pole.count("-") == 4
+
+def test_tah_pocitaca_full_pole():
+    with pytest.raises(RecursionError) as e_info:       # netusim, co je to e_info
+        ai.tah_pocitaca("OOOXOXOXOXOXOXOXOXOX", symbol="O")
+    
+def test_tah_pocitaca_no_pole():
+    with pytest.raises(ValueError) as e_info:
+        ai.tah_pocitaca("", symbol="O")
 
 
 # tests for tah_hraca function
