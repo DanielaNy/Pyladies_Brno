@@ -11,7 +11,7 @@ def tah_hraca(pole, cislo_policka):
     list_pole = list(pole)
     while True:
         try:
-            cislo_policka = int(input('\nNa ktore policko chces umiestnit svoje \'X\'? Zadaj hodnotu 0 - 19: '))
+            # cislo_policka = int(input('\nNa ktore policko chces umiestnit svoje \'X\'? Zadaj hodnotu 0 - 19: '))
             break
         except ValueError:
             print('Pozor! Musis zadat CISLO.')
