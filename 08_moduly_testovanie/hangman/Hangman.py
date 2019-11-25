@@ -1,7 +1,7 @@
 
 def get_word():
     """gets the word from RandomWords module, creates word_dict and initial playfield_list with ----- """
-    print("--- Plesae wait, while the computer selects the word ---")
+    print("/// Plesae wait, till the computer selects the word ///")
     from random_word import RandomWords
     word = RandomWords().get_random_word().lower()
     if "-" in word:
@@ -157,6 +157,7 @@ def gibbet_build(wrong_letters):
     
     
     print(gibbet[len(wrong_letters)])
+    return gibbet[len(wrong_letters)]
 
 def new_game():
     answer = input("Do you wish to play again? [ y / n ] ")
@@ -189,5 +190,3 @@ def game():
             break
         play, playfield_str = verify_playfield(word, playfield_list, wrong_letters)
     new_game()
-
-game()

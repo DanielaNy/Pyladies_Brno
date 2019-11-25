@@ -1,9 +1,3 @@
 {
-  "08/piskvorky/test_piskvorky.py::test_tah_hraca_assign_place": true,
-  "08/piskvorky/test_piskvorky.py::test_tah_hraca_place_symbol": true,
-  "08/piskvorky/test_piskvorky.py::test_tah_pocitaca_place_symbol": true,
-  "08/piskvorky/test_piskvorky.py::test_tah_pocitaca_select_cislo_policka": true,
-  "08/piskvorky_02/test_piskvorky.py::test_tah_pocitaca_full": true,
-  "venv/lib/python3.6/site-packages/importlib_metadata/tests/test_zip.py": true,
-  "venv/lib64/python3.6/site-packages/importlib_metadata/tests/test_zip.py": true
+  "08_moduly_testovanie/piskvorky_02/test_piskvorky.py": true
 }
