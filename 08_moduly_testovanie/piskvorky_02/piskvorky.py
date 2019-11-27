@@ -14,15 +14,15 @@ def tah_hraca(pole, str_policka):
     """funkcia, ktora skontroluje input hraca a zavola funkciu 'tah'"""
     symbol = "X"
     list_pole = list(pole)
-    if str_policka == None:
-        str_policka = input_cislo_policka()
-    while True:
-        try:
-            cislo_policka = int(str_policka)
-            break
-        except ValueError:
-            print('Pozor! Musis zadat CISLO.')
-            continue
+    str_policka = input_cislo_policka()
+
+    try:
+        cislo_policka = int(str_policka)
+        print(cislo_policka)
+    except ValueError:
+        print('Pozor! Musis zadat CISLO.')
+        tah_hraca(pole, str_policka)
+
     print(cislo_policka)
     if cislo_policka in range(0, 20):
         if list_pole[cislo_policka] == "-":
