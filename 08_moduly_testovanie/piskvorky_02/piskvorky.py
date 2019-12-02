@@ -19,19 +19,18 @@ def tah_hraca(pole, str_policka):
     try:
         cislo_policka = int(str_policka)
         print(cislo_policka)
+        if cislo_policka in range(0, 20):
+            if list_pole[cislo_policka] == "-":
+                print('Ok. Policko je volne. Tvoj tah:')
+                pole = tah(cislo_policka, symbol, pole)            
+                return pole
+            else:
+                print('Pozor! Toto policko je uz obsadene.')
+            return tah_hraca(pole, str_policka)
     except ValueError:
         print('Pozor! Musis zadat CISLO.')
-        tah_hraca(pole, str_policka)
+        return tah_hraca(pole, str_policka)
 
-    print(cislo_policka)
-    if cislo_policka in range(0, 20):
-        if list_pole[cislo_policka] == "-":
-            print('Ok. Policko je volne. Tvoj tah:')
-            pole = tah(cislo_policka, symbol, pole)            
-            return pole
-        else:
-            print('Pozor! Toto policko je uz obsadene.')
-            return tah_hraca(pole, str_policka)
     else:
         print('Pozor! Toto policko neexistuje.')
         return tah_hraca(pole, str_policka)
