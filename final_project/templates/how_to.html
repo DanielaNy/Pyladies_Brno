@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <h3>Verbum Disco: How to play</h3>
+    <p>
+        <br>
+        At first, you will have to the .txt file with words and their translations in the form. 
+        The word and translated word in .txt file have to be in one line separated by semi-column and 1 space.
+        Each 2-tuple of words have to be in new line. Please, ommit empty lines. 
+        <br><br>
+        See the example: 
+        <a href="{{ url_for('exampletxt') }}">EXAMPLE .txt FILE</a>
+        <br><br>
+        The set of the words will be stored and after clicking DONE button, the game will start.
+        <br>
+        Then you will be asked to translate 10 randomly chosen words from the set of the words you uploaded. 
+        After each right translation, you will gain points. At the end, you will maybe see the summary.
+    </p>
+  
+{% endblock %}
