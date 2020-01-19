@@ -1,26 +1,14 @@
-<!doctype html>
-<html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <title>Upload Index Page</title>
-    </head>
-    <body>
-        <h1>Upload Index Page</h1>
-        <form id="upload-form" action="{{ url_for('upload_complete') }}" method="POST" enctype="multipart/form-data">
-        
+{% extends "template.html" %}
 
-            <input type="file" name="file" accept=".txt" multiple>
-            <input type="submit" value="send">
+{% block content %}
+    <h3>Upload Index Page</h3>
+    <form id="upload-form" action="{{ url_for('upload_complete') }}" method="POST" enctype="multipart/form-data">
+    
 
-        </form>
-        <a href="{{ url_for('index') }}">Homepage</a>
-        <footer>
-            <p>© Copyright 2020 by DaNy. All rights reversed.</p>
-        </footer>
-    </body>
-</html>
+        <input type="file" name="file" accept=".txt" multiple>
+        <input type="submit" value="send">
+
+    </form>
+
+{% endblock %}
     

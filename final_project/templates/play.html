@@ -1,11 +1,35 @@
 {% extends "template.html" %}
 
 {% block content %}
+ 
+    <h4> Translate these words:
 
-    <h3>Playing Verbum Disco Game</h3>
-    <p>
-        Nothing here yet :/
-        <!-- {{ ('play') }} -->
-    </p>
+
+    </h4>
+    <br><br>
+</form>
+    <form method="POST" action=" {{ url_for('result') }}">
+        {{ form.csrf_token }}
+
+        {{ form.word1.label }}
+        {{ form.word1 }}<br>
+        {{ form.word2.label }}
+        {{ form.word2 }}<br>
+        {{ form.word3.label }}
+        {{ form.word3 }}<br>
+        {{ form.word4.label }}
+        {{ form.word4 }}<br>
+        {{ form.word5.label }}
+        {{ form.word5 }}<br>
+        {{ form.word_ids }}
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+
+
+
 
 {% endblock %}
