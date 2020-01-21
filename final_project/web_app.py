@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_bootstrap import Bootstrap
-from random import randint
+from random import randint, random, choice
 import os
 
 from wtforms import Form, BooleanField, StringField, SubmitField, PasswordField, HiddenField, validators       # to be checked
@@ -20,7 +20,12 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    img_root = os.path.join(APP_ROOT, "static/images/index/")
+    print(img_root, "img root")
+    random_image = choice([x for x in os.listdir(img_root)
+                    if os.path.isfile(os.path.join(img_root, x))])
+    print(random_image, "random image")
+    return render_template("index.html", random_image=random_image, img_root=img_root)
 
 @app.route("/how_to/")
 def how_to():
